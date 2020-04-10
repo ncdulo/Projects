@@ -16,8 +16,9 @@ if __name__ == '__main__':
         exit(2)
 
     try:
-        square_feet = int(width) * int(length)
-        total_cost = int(unit_price) * square_feet
+        square_feet = float(width) * float(length)
+        total_cost = float(unit_price) * square_feet
+        total_cost = round(total_cost, 2)
     except ValueError as e:
         print('Something went wrong!')
         print(e)
